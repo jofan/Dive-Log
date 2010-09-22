@@ -1,0 +1,31 @@
+= form_for @log do |f|
+  %p
+    %label{ :for => :nr } Log #
+    %br/
+    = f.text_field :nr
+  %p
+    %label{ :for => :dive_site } Dive Site
+    %br/
+    = f.text_field :dive_site
+  %p
+    %label{ :for => :date } Date
+    %br/
+    = f.text_field :date
+  %p
+    %label{ :for => :depth } Depth
+    %br/
+    = f.text_field :depth
+  %p
+    %label{ :for => :bottom_time } Bottom Time
+    %br/
+    = f.text_field :bottom_time
+  %p
+    %label{ :for => :notes } Notes
+    %br/
+    = f.text_field :notes
+  %p
+    %label{ :for => :buddy } Buddy
+    %br/
+    = f.text_field :buddy
+  %p
+    = f.submit "Save log"

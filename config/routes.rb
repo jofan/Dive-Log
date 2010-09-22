@@ -1,4 +1,8 @@
 Divelog::Application.routes.draw do
+  root :to => "logs#index"
+  
+  resources :logs
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

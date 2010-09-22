@@ -18,3 +18,8 @@ group :test do
   gem 'rspec', '2.0.0.beta.20'
   gem 'factory_girl', '1.3.2'
 end
+
+group :cucumber do
+  gem 'cucumber-rails'
+  gem 'capybara'
+end
