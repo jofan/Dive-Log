@@ -1,5 +1,9 @@
 %h1= @log.nr
 
+%p
+  %strong Notes:
+  = @log.notes
+
 = link_to "Edit", edit_log_path(@log)
 |
 = link_to "Delete", @log, :method => :delete, :confirm => "Are you sure want to delete this log?"
