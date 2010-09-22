@@ -1,31 +1,32 @@
 = form_for @log do |f|
-  %p
+  = render "shared/error_messages"
+  .field
     %label{ :for => :nr } Log #
     %br/
     = f.text_field :nr
-  %p
+  .field
     %label{ :for => :dive_site } Dive Site
     %br/
     = f.text_field :dive_site
-  %p
+  .field
     %label{ :for => :date } Date
     %br/
     = f.text_field :date
-  %p
+  .field
     %label{ :for => :depth } Depth
     %br/
     = f.text_field :depth
-  %p
+  .field
     %label{ :for => :bottom_time } Bottom Time
     %br/
     = f.text_field :bottom_time
-  %p
+  .field
     %label{ :for => :notes } Notes
     %br/
     = f.text_field :notes
-  %p
+  .field
     %label{ :for => :buddy } Buddy
     %br/
     = f.text_field :buddy
-  %p
+  .action
     = f.submit "Save log"
