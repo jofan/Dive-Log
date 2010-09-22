@@ -20,8 +20,23 @@ class LogsController < ApplicationController
       flash[:notice] = "Log was saved successfully"
       redirect_to @log
     else
-      flash[:notice] = "Log has not been created"
+      flash[:alert] = "Log has not been created"
       render :action => "new"
+    end
+  end
+  
+  def edit
+    @log = Log.find(params[:id])
+  end
+  
+  def update
+    @log = Log.find(params[:id])
+    if @log.update_attributes(params[:log])
+      flash[:notice] = "Log has been updated"
+      redirect_to @log
+    else
+      flash[:alert] = "Log has not been updated"
+      render :action => "edit"
     end
   end
   
