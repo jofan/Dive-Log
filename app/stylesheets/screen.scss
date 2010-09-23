@@ -4,3 +4,55 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+html, body {
+  background-color:#eee;
+  /*background-image:url(/images/bg.png);*/
+  color:#444;
+  font-family:sans-serif;
+  text-shadow: 0 1px 0 #fff;
+}
+header {
+  background-color:#d2d2d2;
+  background-image:url(/images/bg_topbar.png);
+  background-repeat:repeat-x;
+  height:50px;
+  margin-bottom:25px;
+  -moz-box-shadow: 0px 2px 2px #666;
+  -webkit-box-shadow: 0px 2px 3px #666;
+  box-shadow: 0px 2px 2px #666;
+}
+section.content {
+  margin:0 auto;
+  width:960px;
+}
+section.debug {
+  background-color:#eaeaea;
+  border-top:2px solid #454545;
+  bottom:0;
+  color:#333;
+  display:block;
+  position:fixed;
+  height:200px;
+  overflow:auto;
+  padding:2%;
+  width:96%;
+}
+
+/* Forms */
+
+fieldset {
+  border:1px solid #555;
+  padding:15px;
+}
+legend {
+  border:1px solid #555;
+  padding:5px;
+}
+.field {
+  margin-bottom:15px;
+}
+.field input {
+  border:1px solid #999;
+  font-size:140%;
+}
