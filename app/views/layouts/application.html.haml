@@ -6,14 +6,18 @@
     = csrf_meta_tag
   %body
     %header
-      Cool beans
+      %nav
+        = link_to "View logs", logs_path
+        |
+        = link_to "Add log", new_log_path
     %section.content
       .notice
         = notice
         = alert
       = yield
     - if Rails.env.development?
-      %section.debug
-        %h3 Debug info
-        = debug(params)
+      /
+        %section.debug
+          %h3 Debug info
+          / = debug(params)
 

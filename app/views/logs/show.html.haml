@@ -1,9 +1,30 @@
-%h1= @log.nr
+%section.form
+  .actions
+    = link_to "Edit", edit_log_path(@log), :class => "action-link"
+    %br/
+    = link_to"Delete", @log, :method => :delete, :confirm => "Are you sure want to delete this log?", :class => "action-link"
+  %h1
+    <span class="weak">#</span>
+    = @log.nr
+  .date= @log.date
+  %h2{:title => "Dive site"}
+    = @log.dive_site
+  %p
+    = @log.notes
+  %p
+    = @log.depth
+  %p
+    = @log.bottom_time
 
-%p
-  %strong Notes:
-  = @log.notes
-
-= link_to "Edit", edit_log_path(@log)
-|
-= link_to "Delete", @log, :method => :delete, :confirm => "Are you sure want to delete this log?"
+%section.form-extras
+  .map-view
+    %img{:src => "/images/Safari.png", :width => "405", :height => "220"}
+  .thumbs
+    .thumb
+    .thumb
+    .thumb-
+    .thumb
+    .thumb
+    .thumb
+    .thumb
+    .thumb

@@ -1,0 +1,7 @@
+@mixin drop-shadow {
+  background-color:#fff;
+  border:1px solid #bbb;
+  -moz-box-shadow: 2px 2px 2px #999;
+  -webkit-box-shadow: 2px 2px 3px #999;
+  box-shadow: 2px 2px 2px #999;
+}

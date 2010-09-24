@@ -62,67 +62,227 @@ a img {
   border: none;
 }
 
-/* line 8, ../../../app/stylesheets/screen.scss */
+/* line 9, ../../../app/stylesheets/screen.scss */
 html, body {
   background-color: #eee;
   /*background-image:url(/images/bg.png);*/
   color: #444;
-  font-family: sans-serif;
+  font-family: Helvetica;
   text-shadow: 0 1px 0 #fff;
 }
 
-/* line 15, ../../../app/stylesheets/screen.scss */
-header {
-  background-color: #d2d2d2;
-  background-image: url(/images/bg_topbar.png);
-  background-repeat: repeat-x;
-  height: 50px;
-  margin-bottom: 25px;
-  -moz-box-shadow: 0px 2px 2px #666;
-  -webkit-box-shadow: 0px 2px 3px #666;
-  box-shadow: 0px 2px 2px #666;
+/* line 16, ../../../app/stylesheets/screen.scss */
+h1 {
+  font-family: Geneva;
+  font-size: 500%;
+  margin: 0 5% 5% 0;
+  width: 350px;
 }
 
-/* line 25, ../../../app/stylesheets/screen.scss */
+/* line 22, ../../../app/stylesheets/screen.scss */
+h2 {
+  font-size: 200%;
+  font-weight: bold;
+  margin-top: 45px;
+  width: 350px;
+}
+
+/* line 28, ../../../app/stylesheets/screen.scss */
+h3 {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 35px 0 25px 0;
+}
+
+/* line 33, ../../../app/stylesheets/screen.scss */
+p {
+  margin: 20px 5% 15px 0;
+}
+
+/* line 36, ../../../app/stylesheets/screen.scss */
+table {
+  width: 100%;
+}
+
+/* line 39, ../../../app/stylesheets/screen.scss */
+th {
+  font-weight: bold;
+}
+
+/* line 42, ../../../app/stylesheets/screen.scss */
+th, td {
+  border-bottom: 1px solid #999;
+  padding: 8px 10px;
+}
+
+/* line 46, ../../../app/stylesheets/screen.scss */
+table a {
+  text-decoration: none;
+}
+
+/* line 49, ../../../app/stylesheets/screen.scss */
+header {
+  background-color: #d2d2d2;
+  /*background-image:url(/images/bg_topbar.png);*/
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #999;
+  display: block;
+  height: 50px;
+  margin-bottom: 25px;
+  /*-moz-box-shadow: 0px 2px 2px #666;
+  -webkit-box-shadow: 0px 2px 3px #666;
+  box-shadow: 0px 2px 2px #666;*/
+}
+
+/* line 61, ../../../app/stylesheets/screen.scss */
+nav {
+  display: block;
+  margin: 0 auto;
+  padding-top: 18px;
+  width: 960px;
+}
+
+/* line 67, ../../../app/stylesheets/screen.scss */
 section.content {
+  display: block;
   margin: 0 auto;
   width: 960px;
 }
 
-/* line 29, ../../../app/stylesheets/screen.scss */
+/* line 72, ../../../app/stylesheets/screen.scss */
 section.debug {
   background-color: #eaeaea;
   border-top: 2px solid #454545;
   bottom: 0;
   color: #333;
   display: block;
-  position: fixed;
   height: 200px;
   overflow: auto;
   padding: 2%;
   width: 96%;
 }
 
+/* line 84, ../../../app/stylesheets/screen.scss */
+.weak {
+  color: #ccc;
+}
+
 /* Forms */
-/* line 44, ../../../app/stylesheets/screen.scss */
+/* line 89, ../../../app/stylesheets/screen.scss */
+.form, .form-extras {
+  display: block;
+  float: left;
+  min-width: 1px;
+  width: 49%;
+}
+
+/* line 95, ../../../app/stylesheets/screen.scss */
+.form {
+  border-right: 1px solid #999;
+}
+
+/* line 98, ../../../app/stylesheets/screen.scss */
+.form-extras {
+  border-left: 1px solid #fff;
+}
+
+/* line 101, ../../../app/stylesheets/screen.scss */
 fieldset {
-  border: 1px solid #555;
   padding: 15px;
 }
 
-/* line 48, ../../../app/stylesheets/screen.scss */
-legend {
-  border: 1px solid #555;
-  padding: 5px;
-}
-
-/* line 52, ../../../app/stylesheets/screen.scss */
-.field {
+/* line 107, ../../../app/stylesheets/screen.scss */
+.form-row {
+  clear: both;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
-/* line 55, ../../../app/stylesheets/screen.scss */
-.field input {
+/* line 112, ../../../app/stylesheets/screen.scss */
+.label-col {
+  float: left;
+  width: 40%;
+}
+
+/* line 116, ../../../app/stylesheets/screen.scss */
+.field-col {
+  float: left;
+  width: 60%;
+}
+
+/* line 120, ../../../app/stylesheets/screen.scss */
+.field-col input, .field-col textarea {
   border: 1px solid #999;
-  font-size: 140%;
+  font-size: 100%;
+  padding: 3px 2px;
+  width: 95%;
+}
+
+/* line 126, ../../../app/stylesheets/screen.scss */
+.field-col textarea {
+  height: 150px;
+}
+
+/* line 129, ../../../app/stylesheets/screen.scss */
+.action {
+  float: right;
+  margin: 25px 2% 0 0;
+}
+
+/* line 133, ../../../app/stylesheets/screen.scss */
+a.action-link:link, a.action-link:visited {
+  background-color: #212121;
+  color: #eee;
+  display: block;
+  padding: 5px 5px 3px 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 80px;
+}
+
+/* line 142, ../../../app/stylesheets/screen.scss */
+.actions {
+  float: right;
+  font-size: 90%;
+  margin: 2% 5% 0 0;
+}
+
+/* line 147, ../../../app/stylesheets/screen.scss */
+.date {
+  float: right;
+  margin: 32px 5% 0 0;
+  text-align: right;
+}
+
+/* line 152, ../../../app/stylesheets/screen.scss */
+.map-view {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  -moz-box-shadow: 2px 2px 2px #999;
+  -webkit-box-shadow: 2px 2px 3px #999;
+  box-shadow: 2px 2px 2px #999;
+  background-color: #fff;
+  /*background-image:url(/images/Safari.png);*/
+  margin-left: 5%;
+  padding: 2%;
+  width: 86%;
+  height: 220px;
+}
+
+/* line 161, ../../../app/stylesheets/screen.scss */
+.thumbs {
+  margin-left: 5%;
+}
+
+/* line 164, ../../../app/stylesheets/screen.scss */
+.thumb {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  -moz-box-shadow: 2px 2px 2px #999;
+  -webkit-box-shadow: 2px 2px 3px #999;
+  box-shadow: 2px 2px 2px #999;
+  float: left;
+  height: 87px;
+  margin: 25px 5% 0 0;
+  width: 87px;
 }

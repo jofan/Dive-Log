@@ -2,33 +2,40 @@
   %fieldset
     %legend Basic data
     = render "shared/error_messages"
-    .field
-      %label{ :for => :nr } Log #
-      %br/
-      = f.text_field :nr
-    .field
-      %label{ :for => :dive_site } Dive Site
-      %br/
-      = f.text_field :dive_site
-    .field
-      %label{ :for => :date } Date
-      %br/
-      = f.text_field :date
-    .field
-      %label{ :for => :depth } Depth
-      %br/
-      = f.text_field :depth
-    .field
-      %label{ :for => :bottom_time } Bottom Time
-      %br/
-      = f.text_field :bottom_time
-    .field
-      %label{ :for => :notes } Notes
-      %br/
-      = f.text_field :notes
-    .field
-      %label{ :for => :buddy } Buddy
-      %br/
-      = f.text_field :buddy
+    .form-row
+      .label-col
+        %label{ :for => :nr } Log #
+      .field-col
+        = f.text_field :nr
+    .form-row
+      .label-col
+        %label{ :for => :dive_site } Dive Site
+      .field-col
+        = f.text_field :dive_site
+    .form-row
+      .label-col
+        %label{ :for => :date } Date
+      .field-col
+        = f.text_field :date
+    .form-row
+      .label-col
+        %label{ :for => :depth } Depth
+      .field-col
+        = f.text_field :depth
+    .form-row
+      .label-col
+        %label{ :for => :bottom_time } Bottom Time
+      .field-col
+        = f.text_field :bottom_time
+    .form-row
+      .label-col
+        %label{ :for => :notes } Notes
+      .field-col
+        = f.text_area :notes
+    .form-row
+      .label-col
+        %label{ :for => :buddy } Buddy
+      .field-col
+        = f.text_field :buddy
     .action
       = f.submit "Save log"

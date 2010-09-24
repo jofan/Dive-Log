@@ -4,25 +4,68 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "base";
 
 html, body {
   background-color:#eee;
   /*background-image:url(/images/bg.png);*/
   color:#444;
-  font-family:sans-serif;
+  font-family:Helvetica;
   text-shadow: 0 1px 0 #fff;
+}
+h1 {
+  font-family:Geneva;
+  font-size:500%;
+  margin:0 5% 5% 0;
+  width:350px;
+}
+h2 {
+  font-size:200%;
+  font-weight:bold;
+  margin-top: 45px;
+  width:350px;
+}
+h3 {
+  font-size:150%;
+  font-weight:bold;
+  margin:35px 0 25px 0;
+}
+p {
+  margin:20px 5% 15px 0;
+}
+table {
+  width:100%;
+}
+th {
+  font-weight:bold;
+}
+th, td {
+  border-bottom:1px solid #999;
+  padding:8px 10px;
+}
+table a {
+  text-decoration:none;
 }
 header {
   background-color:#d2d2d2;
-  background-image:url(/images/bg_topbar.png);
+  /*background-image:url(/images/bg_topbar.png);*/
   background-repeat:repeat-x;
+  border-bottom:1px solid #999;
+  display:block;
   height:50px;
   margin-bottom:25px;
-  -moz-box-shadow: 0px 2px 2px #666;
+  /*-moz-box-shadow: 0px 2px 2px #666;
   -webkit-box-shadow: 0px 2px 3px #666;
-  box-shadow: 0px 2px 2px #666;
+  box-shadow: 0px 2px 2px #666;*/
+}
+nav {
+  display:block;
+  margin:0 auto;
+  padding-top:18px;
+  width:960px;
 }
 section.content {
+  display:block;
   margin:0 auto;
   width:960px;
 }
@@ -32,27 +75,96 @@ section.debug {
   bottom:0;
   color:#333;
   display:block;
-  position:fixed;
   height:200px;
   overflow:auto;
   padding:2%;
   width:96%;
 }
 
-/* Forms */
+.weak {
+  color:#ccc;
+}
 
+/* Forms */
+.form, .form-extras {
+  display:block;
+  float:left;
+  min-width:1px;
+  width:49%;
+}
+.form {
+  border-right:1px solid #999;
+}
+.form-extras {
+  border-left:1px solid #fff;
+}
 fieldset {
-  border:1px solid #555;
   padding:15px;
 }
 legend {
-  border:1px solid #555;
-  padding:5px;
+  
 }
-.field {
+.form-row {
+  clear:both;
   margin-bottom:15px;
+  overflow:hidden;
 }
-.field input {
+.label-col {
+  float: left;
+  width:40%;
+}
+.field-col {
+  float:left;
+  width:60%;
+}
+.field-col input, .field-col textarea {
   border:1px solid #999;
-  font-size:140%;
+  font-size:100%;
+  padding:3px 2px;
+  width:95%;
+}
+.field-col textarea {
+  height:150px;
+}
+.action {
+  float:right;
+  margin:25px 2% 0 0;
+}
+a.action-link:link, a.action-link:visited {
+  background-color:#212121;
+  color:#eee;
+  display:block;
+  padding:5px 5px 3px 5px;
+  text-align:center;
+  text-decoration:none;
+  width:80px;
+}
+.actions {
+  float:right;
+  font-size:90%;
+  margin:2% 5% 0 0;
+}
+.date {
+  float:right;
+  margin:32px 5% 0 0;
+  text-align:right;
+}
+.map-view {
+  @include drop-shadow;
+  background-color:#fff;
+  /*background-image:url(/images/Safari.png);*/
+  margin-left:5%;
+  padding:2%;
+  width:86%;
+  height:220px;
+}
+.thumbs {
+  margin-left:5%;
+}
+.thumb {
+  @include drop-shadow;
+  float:left;
+  height:87px;
+  margin:25px 5% 0 0;
+  width:87px;
 }
