@@ -1,0 +1,84 @@
+/* http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba */
+@mixin rounded-gradient-button {
+  $grad-begin:rgba(20,20,20,1);
+  $grad-end:rgba(120,120,120,1);
+  .rounded-btn {
+  background-color: #222; /*url(/images/alert-overlay.png) repeat-x;*/
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from($grad-begin),
+      to($grad-end)
+  );
+  background-image: -moz-linear-gradient(
+      center bottom,
+      $grad-begin,
+      $grad-end
+  );
+  display: inline-block;
+  padding: 8px 30px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+  }
+  .rounded-btn:hover {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.03, rgb(10,10,10)),
+        color-stop(0.6, rgb(86,88,89))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(10,10,10) 3%,
+        rgb(66,68,69) 60%
+    );
+  }
+}
+
+/* http://designlovr.com/beautiful-photoshop-like-buttons-with-css3/ */
+
+@mixin flat-gradient-button {
+  .flat-btn {
+    /* General Propertoes */
+    border:1px solid #858fa6;
+    background:#4a5775;
+    /* CSS3 Styling */
+    background:-moz-linear-gradient(top, #606c88, #3f4c6b);
+    background:-webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:0px 0px 5px #000;
+    -webkit-box-shadow:0px 0px 5px #000;
+    box-shadow:0px 0px 5px #000;
+    /* Text Styling */
+    color:#e5edff;
+    text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+    display:block;
+    padding:5px 10px 3px;
+    width:80px;
+    text-align:center;
+    text-decoration:none;
+  }
+  .flat-btn:hover, .flat-btn:focus {
+    border-color:#adbad9;
+  }
+
+  .flat-btn:active {
+    background:-moz-linear-gradient(bottom, #606c88, #3f4c6b);
+    background:-webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
+    text-shadow:0px 0px 2px #000;
+  }
+}

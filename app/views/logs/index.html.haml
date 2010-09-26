@@ -1,18 +1,20 @@
 %h3 All logs
 
 %table
-  %tr
-    %th Dive #
-    %th Dive Site
-    %th Date
-    %th Depth
-    %th Time
-    %th Buddy
-  - @logs.each do |log|
+  %thead
     %tr
-      %td= link_to "Dive # #{log.nr}", log
-      %td= link_to log.dive_site, log
-      %td= link_to log.date, log
-      %td= link_to log.depth, log
-      %td= link_to log.bottom_time, log
-      %td= link_to log.buddy, log
+      %th.number #
+      %th Dive Site
+      %th Date
+      %th.number Depth
+      %th.number Time
+      %th Buddy
+  %tbody
+    - @logs.each do |log|
+      %tr
+        %td.number= link_to log.nr, log
+        %td= link_to log.dive_site, log
+        %td= link_to log.date, log
+        %td.number= link_to log.depth, log
+        %td.number= link_to log.bottom_time, log
+        %td= link_to log.buddy, log

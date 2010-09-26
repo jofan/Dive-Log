@@ -10,14 +10,11 @@
         = link_to "View logs", logs_path
         |
         = link_to "Add log", new_log_path
-    %section.content
-      .notice
-        = notice
-        = alert
+    .content
+      - flash.each do |key, value|
+        .notice
+          = value
       = yield
     - if Rails.env.development?
-      /
-        %section.debug
-          %h3 Debug info
-          / = debug(params)
+      / %section.debug %h3 Debug info = debug(params)
 

@@ -1,8 +1,8 @@
 %section.form
   .actions
-    = link_to "Edit", edit_log_path(@log), :class => "action-link"
+    = link_to "Edit", edit_log_path(@log), :class => "flat-btn"
     %br/
-    = link_to"Delete", @log, :method => :delete, :confirm => "Are you sure want to delete this log?", :class => "action-link"
+    /= link_to"Delete", @log, :method => :delete, :confirm => "Are you sure want to delete this log?", :class => "awesome"
   %h1
     <span class="weak">#</span>
     = @log.nr
@@ -11,10 +11,22 @@
     = @log.dive_site
   %p
     = @log.notes
-  %p
-    = @log.depth
-  %p
-    = @log.bottom_time
+  .dive-profile
+    .si-row
+      .si
+      .gap
+      .group
+    .depth-row
+      .depth
+        = @log.depth
+        m
+      .sink
+      .deco
+    .bt-row
+      .gap2
+      .bt
+        = @log.bottom_time
+        min
 
 %section.form-extras
   .map-view

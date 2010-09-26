@@ -62,79 +62,113 @@ a img {
   border: none;
 }
 
-/* line 9, ../../../app/stylesheets/screen.scss */
+/* http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba */
+/* http://designlovr.com/beautiful-photoshop-like-buttons-with-css3/ */
+@font-face {
+  font-family: 'BPreplayRegular';
+  src: url("/stylesheets/fonts/BPreplay/BPreplay-webfont.eot");
+  src: local("☺"), url("/stylesheets/fonts/BPreplay/BPreplay-webfont.woff") format("woff"), url("/stylesheets/fonts/BPreplay/BPreplay-webfont.ttf") format("truetype"), url("/stylesheets/fonts/BPreplay/BPreplay-webfont.svg#webfontgzJ8Cr4g") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 19, ../../../app/stylesheets/screen.scss */
 html, body {
   background-color: #eee;
   /*background-image:url(/images/bg.png);*/
   color: #444;
-  font-family: Helvetica;
-  text-shadow: 0 1px 0 #fff;
+  font-family: BPreplayRegular, SansationRegular, Helvetica;
 }
 
-/* line 16, ../../../app/stylesheets/screen.scss */
+/* line 25, ../../../app/stylesheets/screen.scss */
 h1 {
-  font-family: Geneva;
+  font-family: BPreplayRegular, SansationRegular, Helvetica, Geneva;
   font-size: 500%;
   margin: 0 5% 5% 0;
+  text-shadow: 0 1px 0 #fff;
   width: 350px;
 }
 
-/* line 22, ../../../app/stylesheets/screen.scss */
+/* line 32, ../../../app/stylesheets/screen.scss */
 h2 {
   font-size: 200%;
   font-weight: bold;
   margin-top: 45px;
+  text-shadow: 0 1px 0 #fff;
   width: 350px;
 }
 
-/* line 28, ../../../app/stylesheets/screen.scss */
+/* line 39, ../../../app/stylesheets/screen.scss */
 h3 {
   font-size: 150%;
   font-weight: bold;
   margin: 35px 0 25px 0;
 }
 
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 44, ../../../app/stylesheets/screen.scss */
 p {
+  line-height: 1.25em;
   margin: 20px 5% 15px 0;
 }
 
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 48, ../../../app/stylesheets/screen.scss */
 table {
   width: 100%;
 }
 
-/* line 39, ../../../app/stylesheets/screen.scss */
+/* line 51, ../../../app/stylesheets/screen.scss */
 th {
   font-weight: bold;
 }
 
-/* line 42, ../../../app/stylesheets/screen.scss */
+/* line 54, ../../../app/stylesheets/screen.scss */
 th, td {
   border-bottom: 1px solid #999;
   padding: 8px 10px;
 }
 
-/* line 46, ../../../app/stylesheets/screen.scss */
+/* line 58, ../../../app/stylesheets/screen.scss */
 table a {
   text-decoration: none;
 }
 
-/* line 49, ../../../app/stylesheets/screen.scss */
+/* line 61, ../../../app/stylesheets/screen.scss */
+th.number {
+  width: 40px;
+}
+
+/* line 64, ../../../app/stylesheets/screen.scss */
+td.number {
+  /*text-align:right;*/
+}
+
+/* line 67, ../../../app/stylesheets/screen.scss */
 header {
   background-color: #d2d2d2;
-  /*background-image:url(/images/bg_topbar.png);*/
+  background-image: url(/images/bg_topbar.png);
   background-repeat: repeat-x;
-  border-bottom: 1px solid #999;
+  border-bottom: 2px solid #fff;
   display: block;
-  height: 50px;
-  margin-bottom: 25px;
+  height: 64px;
+  margin-bottom: 45px;
+  /*background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.03, rgb(20,20,20)),
+      color-stop(0.6, rgb(86,88,89))
+  );
+  background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(20,20,20) 3%,
+      rgb(86,88,89) 60%
+  );*/
   /*-moz-box-shadow: 0px 2px 2px #666;
   -webkit-box-shadow: 0px 2px 3px #666;
   box-shadow: 0px 2px 2px #666;*/
 }
 
-/* line 61, ../../../app/stylesheets/screen.scss */
+/* line 91, ../../../app/stylesheets/screen.scss */
 nav {
   display: block;
   margin: 0 auto;
@@ -142,14 +176,28 @@ nav {
   width: 960px;
 }
 
-/* line 67, ../../../app/stylesheets/screen.scss */
-section.content {
-  display: block;
+/* line 97, ../../../app/stylesheets/screen.scss */
+.content {
   margin: 0 auto;
-  width: 960px;
+  padding: 0 20px;
+  width: 940px;
 }
 
-/* line 72, ../../../app/stylesheets/screen.scss */
+/* line 102, ../../../app/stylesheets/screen.scss */
+.notice {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  margin-bottom: 25px;
+  margin-top: -20px;
+  padding: 20px;
+}
+
+/* line 109, ../../../app/stylesheets/screen.scss */
 section.debug {
   background-color: #eaeaea;
   border-top: 2px solid #454545;
@@ -162,55 +210,55 @@ section.debug {
   width: 96%;
 }
 
-/* line 84, ../../../app/stylesheets/screen.scss */
+/* line 121, ../../../app/stylesheets/screen.scss */
 .weak {
   color: #ccc;
 }
 
 /* Forms */
-/* line 89, ../../../app/stylesheets/screen.scss */
+/* line 126, ../../../app/stylesheets/screen.scss */
 .form, .form-extras {
   display: block;
   float: left;
   min-width: 1px;
-  width: 49%;
+  width: 49.9%;
 }
 
-/* line 95, ../../../app/stylesheets/screen.scss */
+/* line 132, ../../../app/stylesheets/screen.scss */
 .form {
-  border-right: 1px solid #999;
+  border-right: 1px dotted #999;
 }
 
-/* line 98, ../../../app/stylesheets/screen.scss */
+/* line 135, ../../../app/stylesheets/screen.scss */
 .form-extras {
-  border-left: 1px solid #fff;
+  /*border-left:1px solid #fff;*/
 }
 
-/* line 101, ../../../app/stylesheets/screen.scss */
+/* line 138, ../../../app/stylesheets/screen.scss */
 fieldset {
   padding: 15px;
 }
 
-/* line 107, ../../../app/stylesheets/screen.scss */
+/* line 144, ../../../app/stylesheets/screen.scss */
 .form-row {
   clear: both;
   margin-bottom: 15px;
   overflow: hidden;
 }
 
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 149, ../../../app/stylesheets/screen.scss */
 .label-col {
   float: left;
   width: 40%;
 }
 
-/* line 116, ../../../app/stylesheets/screen.scss */
+/* line 153, ../../../app/stylesheets/screen.scss */
 .field-col {
   float: left;
   width: 60%;
 }
 
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 157, ../../../app/stylesheets/screen.scss */
 .field-col input, .field-col textarea {
   border: 1px solid #999;
   font-size: 100%;
@@ -218,18 +266,18 @@ fieldset {
   width: 95%;
 }
 
-/* line 126, ../../../app/stylesheets/screen.scss */
+/* line 163, ../../../app/stylesheets/screen.scss */
 .field-col textarea {
   height: 150px;
 }
 
-/* line 129, ../../../app/stylesheets/screen.scss */
+/* line 166, ../../../app/stylesheets/screen.scss */
 .action {
   float: right;
   margin: 25px 2% 0 0;
 }
 
-/* line 133, ../../../app/stylesheets/screen.scss */
+/* line 170, ../../../app/stylesheets/screen.scss */
 a.action-link:link, a.action-link:visited {
   background-color: #212121;
   color: #eee;
@@ -240,27 +288,26 @@ a.action-link:link, a.action-link:visited {
   width: 80px;
 }
 
-/* line 142, ../../../app/stylesheets/screen.scss */
+/* line 179, ../../../app/stylesheets/screen.scss */
 .actions {
   float: right;
   font-size: 90%;
   margin: 2% 5% 0 0;
 }
 
-/* line 147, ../../../app/stylesheets/screen.scss */
+/* line 184, ../../../app/stylesheets/screen.scss */
 .date {
   float: right;
   margin: 32px 5% 0 0;
   text-align: right;
 }
 
-/* line 152, ../../../app/stylesheets/screen.scss */
+/* line 189, ../../../app/stylesheets/screen.scss */
 .map-view {
-  background-color: #fff;
-  border: 1px solid #bbb;
-  -moz-box-shadow: 2px 2px 2px #999;
-  -webkit-box-shadow: 2px 2px 3px #999;
-  box-shadow: 2px 2px 2px #999;
+  -moz-box-shadow: #666666 1px 1px 5px 0;
+  -webkit-box-shadow: #666666 1px 1px 5px 0;
+  -o-box-shadow: #666666 1px 1px 5px 0;
+  box-shadow: #666666 1px 1px 5px 0;
   background-color: #fff;
   /*background-image:url(/images/Safari.png);*/
   margin-left: 5%;
@@ -269,20 +316,212 @@ a.action-link:link, a.action-link:visited {
   height: 220px;
 }
 
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 198, ../../../app/stylesheets/screen.scss */
 .thumbs {
   margin-left: 5%;
 }
 
-/* line 164, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 .thumb {
+  -moz-box-shadow: #666666 1px 1px 5px 0;
+  -webkit-box-shadow: #666666 1px 1px 5px 0;
+  -o-box-shadow: #666666 1px 1px 5px 0;
+  box-shadow: #666666 1px 1px 5px 0;
   background-color: #fff;
-  border: 1px solid #bbb;
-  -moz-box-shadow: 2px 2px 2px #999;
-  -webkit-box-shadow: 2px 2px 3px #999;
-  box-shadow: 2px 2px 2px #999;
   float: left;
-  height: 87px;
+  height: 89px;
   margin: 25px 5% 0 0;
-  width: 87px;
+  width: 89px;
+}
+
+/* line 209, ../../../app/stylesheets/screen.scss */
+.dive-profile {
+  font-size: 130%;
+  font-weight: bold;
+  margin-left: 35px;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 217, ../../../app/stylesheets/screen.scss */
+.si-row {
+  height: 40px;
+  overflow: hidden;
+  width: 360px;
+}
+
+/* line 222, ../../../app/stylesheets/screen.scss */
+.si {
+  float: left;
+  border-bottom: 5px solid #bbbbbb;
+  height: 35px;
+  width: 120px;
+}
+
+/* line 228, ../../../app/stylesheets/screen.scss */
+.gap, .gap2 {
+  float: left;
+  height: 40px;
+  width: 115px;
+}
+
+/* line 233, ../../../app/stylesheets/screen.scss */
+.gap2 {
+  width: 120px;
+}
+
+/* line 236, ../../../app/stylesheets/screen.scss */
+.group {
+  float: left;
+  border-bottom: 5px solid #bbbbbb;
+  height: 35px;
+  width: 120px;
+}
+
+/* line 242, ../../../app/stylesheets/screen.scss */
+.depth-row {
+  height: 100px;
+  overflow: hidden;
+  width: 360px;
+}
+
+/* line 247, ../../../app/stylesheets/screen.scss */
+.depth {
+  border-right: 5px solid #bbbbbb;
+  float: left;
+  height: 40px;
+  padding-top: 60px;
+  width: 115px;
+}
+
+/* line 254, ../../../app/stylesheets/screen.scss */
+.sink {
+  border-bottom: 5px solid #bbbbbb;
+  float: left;
+  height: 95px;
+  width: 115px;
+}
+
+/* line 260, ../../../app/stylesheets/screen.scss */
+.deco {
+  border-left: 5px solid #bbbbbb;
+  float: left;
+  height: 100px;
+  width: 115px;
+}
+
+/* line 266, ../../../app/stylesheets/screen.scss */
+.bt-row {
+  height: 40px;
+  overflow: hidden;
+  width: 360px;
+}
+
+/* line 271, ../../../app/stylesheets/screen.scss */
+.bt {
+  float: left;
+  padding-top: 15px;
+  width: 120px;
+}
+
+/* line 5, ../../../app/stylesheets/mixins/_buttons.scss */
+.rounded-btn {
+  background-color: #222;
+  /*url(/images/alert-overlay.png) repeat-x;*/
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#141414), to(#787878));
+  background-image: -moz-linear-gradient(center bottom, #141414, #787878);
+  display: inline-block;
+  padding: 8px 30px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 34, ../../../app/stylesheets/mixins/_buttons.scss */
+.rounded-btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.03, #0a0a0a), color-stop(0.6, #565859));
+  background-image: -moz-linear-gradient(center bottom, #0a0a0a 3%, #424445 60%);
+}
+
+/* line 53, ../../../app/stylesheets/mixins/_buttons.scss */
+.flat-btn {
+  /* General Propertoes */
+  border: 1px solid #858fa6;
+  background: #4a5775;
+  /* CSS3 Styling */
+  background: -moz-linear-gradient(top, #606c88, #3f4c6b);
+  background: -webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 5px #000;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+  /* Text Styling */
+  color: #e5edff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  display: block;
+  padding: 5px 10px 3px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 75, ../../../app/stylesheets/mixins/_buttons.scss */
+.flat-btn:hover, .flat-btn:focus {
+  border-color: #adbad9;
+}
+
+/* line 79, ../../../app/stylesheets/mixins/_buttons.scss */
+.flat-btn:active {
+  background: -moz-linear-gradient(bottom, #606c88, #3f4c6b);
+  background: -webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
+  text-shadow: 0px 0px 2px #000;
+}
+
+/* line 281, ../../../app/stylesheets/screen.scss */
+.button3 {
+  /* General Properties */
+  border: 1px solid #494949;
+  background: #404040;
+  /* CSS3 Styling */
+  background: -moz-radial-gradient(bottom, #656565, #404040 60%);
+  background: -webkit-gradient(radial, center bottom, 0, center 230, 230, from(#656565), to(#404040));
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 3px #000;
+  -webkit-box-shadow: 0px 0px 3px #000;
+  box-shadow: 0px 0px 3px #000;
+  /* Text Styling */
+  color: #fff;
+  display: block;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  padding: 5px 0 3px 0;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 304, ../../../app/stylesheets/screen.scss */
+.button3:hover, input#button3:focus {
+  background: -moz-radial-gradient(bottom, #656565, #404040 80%);
+  background: -webkit-gradient(radial, center bottom, 0, center 230, 250, from(#656565), to(#404040));
+}
+
+/* line 309, ../../../app/stylesheets/screen.scss */
+.button3:active {
+  -moz-box-shadow: 0px 0px 2px #000;
+  -webkit-box-shadow: 0px 0px 2px #000;
+  box-shadow: 0px 0px 2px #000;
+  text-shadow: 0px 0px 8px white;
 }
