@@ -8,14 +8,6 @@
 @import "partials/base";
 @import "mixins/buttons";
 
-@font-face {
-	font-family: 'BPreplayRegular';
-	src: url('/stylesheets/fonts/BPreplay/BPreplay-webfont.eot');
-	src: local('☺'), url('/stylesheets/fonts/BPreplay/BPreplay-webfont.woff') format('woff'), url('/stylesheets/fonts/BPreplay/BPreplay-webfont.ttf') format('truetype'), url('/stylesheets/fonts/BPreplay/BPreplay-webfont.svg#webfontgzJ8Cr4g') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 html, body {
   background-color:#eee;
   /*background-image:url(/images/bg.png);*/
