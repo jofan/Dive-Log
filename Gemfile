@@ -23,7 +23,3 @@ group :cucumber do
   gem 'cucumber-rails'
   gem 'capybara'
 end
-
-group :production do
-  gem 'hassle'
-end
