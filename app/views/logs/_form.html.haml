@@ -9,14 +9,19 @@
         = f.text_field :nr
     .form-row
       .label-col
+        %label{ :for => :date } Date
+      .field-col
+        = f.text_field :date
+    .form-row
+      .label-col
         %label{ :for => :dive_site } Dive Site
       .field-col
         = f.text_field :dive_site
     .form-row
       .label-col
-        %label{ :for => :date } Date
+        %label{ :for => :location } Location
       .field-col
-        = f.text_field :date
+        = f.text_field :location
     .form-row
       .label-col
         %label{ :for => :depth } Depth

@@ -1,12 +1,18 @@
 class LogsController < ApplicationController
   
+  # TODO: add a before and set units.
+  
   def index
     @logs = Log.all
+    @unit_depth = UNIT_LENGTH
+    @unit_time = UNIT_TIME
   end
   
   def show
     @log = Log.find(params[:id])
     @title = "Dive log # #{@log.nr}"
+    @unit_depth = UNIT_LENGTH
+    @unit_time = UNIT_TIME
   end
   
   def new

@@ -9,6 +9,7 @@
   .date= @log.date
   %h2{:title => "Dive site"}
     = @log.dive_site
+  %p= @log.location
   %p
     = @log.notes
   .dive-profile
@@ -17,16 +18,12 @@
       .gap
       .group
     .depth-row
-      .depth
-        = @log.depth
-        m
+      .depth= @log.depth.to_s + " " + @unit_depth[:short]
       .sink
       .deco
     .bt-row
       .gap2
-      .bt
-        = @log.bottom_time
-        min
+      .bt= @log.bottom_time.to_s + " " + @unit_time[:short]
 
 %section.form-extras
   .map-view

@@ -1,8 +1,9 @@
 class Log
   include Mongoid::Document
   field :nr
-  field :dive_site
   field :date, :type => Date
+  field :dive_site
+  field :location
   field :depth, :type => Float
   field :bottom_time, :type => Integer
   field :notes

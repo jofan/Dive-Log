@@ -1,5 +1,16 @@
 %h3 All logs
 
+.filter
+  Filter: 
+  %span.filter-item Cave
+  %span.filter-item Deep
+  %span.filter-item Reef
+  %span.filter-item Tech
+  %span.filter-item Training
+  %span.filter-item Wreck
+  %span
+    %input
+
 %table
   %thead
     %tr
@@ -15,6 +26,8 @@
         %td.number= link_to log.nr, log
         %td= link_to log.dive_site, log
         %td= link_to log.date, log
-        %td.number= link_to log.depth, log
-        %td.number= link_to log.bottom_time, log
+        %td.number
+          = link_to log.depth.to_s + " " + @unit_depth[:short], log
+        %td.number
+          = link_to log.bottom_time.to_s + " " + @unit_time[:short], log
         %td= link_to log.buddy, log
